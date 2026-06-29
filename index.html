@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // Apply saved/system theme before paint to avoid a flash of the wrong theme.
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme')
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+          var dark = saved ? saved === 'dark' : prefersDark
+          document.documentElement.classList.toggle('dark', dark)
+          document.documentElement.style.colorScheme = dark ? 'dark' : 'light'
+        } catch (e) {}
+      })()
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>Pasindu Dilshan Balasooriya — Full-Stack Engineer, Colombo</title>
+    <meta
+      name="description"
+      content="Pasindu Dilshan Balasooriya — Full-Stack Engineer in Colombo, Sri Lanka. Building secure systems end to end with Spring Boot, React, and WSO2 Identity Server."
+    />
+    <meta name="author" content="Pasindu Dilshan Balasooriya" />
+    <link rel="canonical" href="https://pasindubalasooriya.github.io/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Pasindu Dilshan Balasooriya" />
+    <meta property="og:title" content="Pasindu Dilshan Balasooriya — Full-Stack Engineer" />
+    <meta
+      property="og:description"
+      content="Full-Stack Engineer in Colombo, Sri Lanka. Building secure systems end to end with Spring Boot, React, and WSO2 Identity Server."
+    />
+    <meta property="og:url" content="https://pasindubalasooriya.github.io/" />
+    <meta property="og:image" content="https://pasindubalasooriya.github.io/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Pasindu Dilshan Balasooriya — Full-Stack Engineer" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pasindu Dilshan Balasooriya — Full-Stack Engineer" />
+    <meta
+      name="twitter:description"
+      content="Full-Stack Engineer in Colombo, Sri Lanka. Building secure systems end to end."
+    />
+    <meta name="twitter:image" content="https://pasindubalasooriya.github.io/og-image.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Structured data: Person -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Pasindu Dilshan Balasooriya",
+        "jobTitle": "Full-Stack Engineer",
+        "url": "https://pasindubalasooriya.github.io/",
+        "image": "https://pasindubalasooriya.github.io/profile.jpg",
+        "email": "mailto:pasindudilshanbalasooriya@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Colombo",
+          "addressCountry": "Sri Lanka"
+        },
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Staffordshire"
+        },
+        "knowsAbout": [
+          "Full-Stack Development",
+          "Java",
+          "Spring Boot",
+          "React",
+          "AWS",
+          "DevOps",
+          "CI/CD",
+          "Identity and Access Management",
+          "WSO2 Identity Server",
+          "OAuth2",
+          "OpenID Connect",
+          "Open Source"
+        ],
+        "sameAs": [
+          "https://github.com/pasindubalasooriya",
+          "https://www.linkedin.com/in/pasindu-dilshan-balasooriya-a18378305/",
+          "https://medium.com/@pasindudilshanbalasooriya"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
