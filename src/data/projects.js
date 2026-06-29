@@ -20,7 +20,7 @@ export const projects = [
     title: 'WSO2 IS on AWS',
     status: 'Completed',
     description:
-      'Highly available WSO2 Identity Server across two AWS availability zones — defined entirely in Terraform and tuned to run at $0 on the free tier.',
+      'Highly available WSO2 Identity Server across two AWS availability zones, defined entirely in Terraform and tuned to run at $0 on the free tier.',
     tech: ['Terraform', 'AWS', 'WSO2 IS', 'OIDC'],
     github: 'https://github.com/pasindubalasooriya/wso2-is-aws',
     demo: '',
@@ -29,7 +29,7 @@ export const projects = [
     title: 'Library Management System',
     status: 'Completed',
     description:
-      'Microservices library platform with GitOps delivery — .NET backend services and a React UI running on Kubernetes (K3s) on AWS.',
+      'Microservices library platform with GitOps delivery, .NET backend services and a React UI running on Kubernetes (K3s) on AWS.',
     tech: ['.NET', 'React', 'Docker', 'Kubernetes', 'ArgoCD'],
     github: 'https://github.com/pasindubalasooriya/LMS',
     demo: '',

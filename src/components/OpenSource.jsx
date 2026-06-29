@@ -7,8 +7,8 @@ import { ExternalIcon } from './icons'
 export default function OpenSource() {
   return (
     <Section id="opensource" className="max-w-content mx-auto px-6 py-24 md:py-32">
-      <SectionHeader index="03" title="Open Source" sublabel="WSO2 repositories" className="mb-3" />
-      <p className="text-muted mb-10">Contributing to the projects I want to work on.</p>
+      <SectionHeader index="03" title="Open Source" sublabel="" className="mb-3" />
+      <p className="text-muted mb-10">Contributing to the open-source ecosystem.</p>
 
       <Stagger as="ul" className="divide-y divide-line border-t border-b border-line">
         {contributions.map((c) => (

@@ -14,8 +14,8 @@ export default function Contact() {
     <Section id="contact" className="max-w-content mx-auto px-6 py-24 md:py-32 text-center">
       <h2 className="font-display text-4xl md:text-5xl text-text">Let's talk.</h2>
       <p className="text-muted mt-5 max-w-xl mx-auto leading-relaxed">
-        Whether it's identity, secure systems, or an idea sharp enough to be worth building —
-        I'd like to hear about it. My inbox is always open.
+        Whether it's a full-stack product to build end to end, a backend to architect, or an idea
+        sharp enough to be worth shipping, I'd like to hear about it. My inbox is always open.
       </p>
 
       <div className="mt-12 flex flex-wrap justify-center gap-8 md:gap-12">

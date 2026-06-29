@@ -44,7 +44,7 @@ export default function Writing() {
         ))}
       </div>
 
-      <Stagger className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <Stagger key={filter} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {visible.map((a, i) => (
           <StaggerItem
             as="a"
@@ -57,10 +57,23 @@ export default function Writing() {
             className="group rounded-xl border border-line bg-surface overflow-hidden flex flex-col transition-all duration-300 hover:border-accent hover:shadow-[0_10px_40px_-15px_rgba(29,158,117,0.45)]"
           >
             <div
-              className="h-32 flex items-center justify-center"
+              className="relative h-32 flex items-center justify-center overflow-hidden"
               style={{ background: palettes[i % palettes.length] }}
             >
+              {/* Letter tile is always rendered as the base layer; the cover
+                  image sits on top and simply reveals it if it fails to load. */}
               <span className="font-display text-5xl text-white/95">{a.title.charAt(0)}</span>
+              {a.image && (
+                <img
+                  src={`${import.meta.env.BASE_URL}${a.image}`}
+                  alt=""
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none'
+                  }}
+                />
+              )}
             </div>
             <div className="p-5 flex flex-col flex-1">
               <span className="font-mono text-[11px] text-accent">{a.category}</span>

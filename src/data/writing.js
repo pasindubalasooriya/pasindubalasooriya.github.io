@@ -1,10 +1,10 @@
 // Medium articles. `category` drives the filter tabs in the Writing section
 // (the tab list is derived from the unique categories below, plus "All").
-// `readTime` values are estimates — adjust to the real figures if you like.
 export const writing = [
   {
     title: 'How I Ran WSO2 Identity Server on AWS Without Spending a Cent',
     url: 'https://medium.com/@pasindudilshanbalasooriya/how-i-ran-a-real-identity-server-on-aws-without-spending-a-cent-f7c304478129',
+    image: 'thumbnails/wso2-aws.png',
     date: 'Jun 2026',
     readTime: '8 min read',
     category: 'WSO2',
@@ -13,6 +13,7 @@ export const writing = [
   {
     title: 'eu-west-2 Is Not a Compliance Strategy',
     url: 'https://medium.com/@pasindudilshanbalasooriya/eu-west-2-is-not-a-compliance-strategy-d261ef864b80',
+    image: 'thumbnails/eu-west-2.png',
     date: 'Jun 2026',
     readTime: '6 min read',
     category: 'Cloud',
@@ -21,6 +22,7 @@ export const writing = [
   {
     title: 'Analysis of "Stopping by the Woods", Robert Frost',
     url: 'https://medium.com/@pasindudilshanbalasooriya/analysis-of-stopping-by-the-woods-robert-frost-ca96a3bf89f4',
+    image: 'thumbnails/stopping-by-woods.jpg',
     date: 'Jun 2026',
     readTime: '5 min read',
     category: 'Writing',
@@ -29,6 +31,7 @@ export const writing = [
   {
     title: 'How I Swapped My Entire Database in One Afternoon',
     url: 'https://medium.com/@pasindudilshanbalasooriya/how-i-swapped-my-entire-database-in-one-afternoon-64a268107d25',
+    image: 'thumbnails/swapped-database.png',
     date: 'May 2026',
     readTime: '6 min read',
     category: 'Engineering',
@@ -37,6 +40,7 @@ export const writing = [
   {
     title: 'When Red Means Nothing: Designing Colour-Blind Safe UIs for Emergency Dispatch Systems',
     url: 'https://medium.com/@pasindudilshanbalasooriya/when-red-means-nothing-designing-colour-blind-safe-uis-for-emergency-dispatch-systems-e1223aad1e2b',
+    image: 'thumbnails/colour-blind.png',
     date: 'May 2026',
     readTime: '7 min read',
     category: 'Design',
@@ -45,6 +49,7 @@ export const writing = [
   {
     title: 'Heartbeats, Not Clicks: UX Under Extreme Pressure',
     url: 'https://medium.com/@pasindudilshanbalasooriya/heartbeats-not-clicks-ux-under-extreme-pressure-17dcdcece336',
+    image: 'thumbnails/heartbeats.png',
     date: 'May 2026',
     readTime: '6 min read',
     category: 'Design',
@@ -53,6 +58,7 @@ export const writing = [
   {
     title: "Aunt Jennifer's Tigers",
     url: 'https://medium.com/@pasindudilshanbalasooriya/aunt-jennifers-tigers-7dbeca42b65c',
+    image: 'thumbnails/aunt-jennifers-tigers.jpg',
     date: 'Oct 2025',
     readTime: '4 min read',
     category: 'Writing',
@@ -61,6 +67,7 @@ export const writing = [
   {
     title: 'ACID vs BASE is a False Dichotomy: Why Your System Needs Both',
     url: 'https://medium.com/@pasindudilshanbalasooriya/acid-vs-base-is-a-false-dichotomy-why-your-system-needs-both-379981a4ae73',
+    image: 'thumbnails/acid-base.png',
     date: 'Oct 2025',
     readTime: '7 min read',
     category: 'Engineering',
@@ -69,6 +76,7 @@ export const writing = [
   {
     title: "Dynamic Typing Is Fun, Until It Isn't (Lessons from Python and C#)",
     url: 'https://medium.com/@pasindudilshanbalasooriya/dynamic-typing-is-fun-until-it-isnt-lessons-from-python-and-c-7bf769ba99e2',
+    image: 'thumbnails/dynamic-typing.jpg',
     date: 'Aug 2025',
     readTime: '6 min read',
     category: 'Engineering',
@@ -77,6 +85,7 @@ export const writing = [
   {
     title: "The Operator's Identity Crisis: Polymorphism of the plus (+) Operator",
     url: 'https://medium.com/@pasindudilshanbalasooriya/the-operators-identity-crisis-polymorphism-of-the-plus-operator-17f723a678c7',
+    image: 'thumbnails/operator-polymorphism.png',
     date: 'Jul 2025',
     readTime: '5 min read',
     category: 'Engineering',

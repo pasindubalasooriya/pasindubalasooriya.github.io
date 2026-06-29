@@ -6,7 +6,7 @@ export const profile = {
   initials: 'PDB',
   role: 'Full-Stack Engineer',
   location: 'Colombo, Sri Lanka',
-  tagline: 'Full-stack engineer building secure systems end to end — and writing about what matters.',
+  tagline: 'Full-stack engineer building secure systems end to end - and writing about what matters.',
   openToWork: true,
 
   // Portrait shown in the About section. Drop the file at public/profile.jpg.
@@ -21,7 +21,7 @@ export const profile = {
 
 // Stat block for the About section.
 export const stats = [
-  { value: '2', label: 'PRs merged into WSO2' },
+  { value: '2', label: 'Open-source PRs merged' },
   { value: '7', label: 'Projects built' },
   { value: '10', label: 'Articles on Medium' },
 ]

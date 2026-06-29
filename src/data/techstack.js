@@ -1,7 +1,6 @@
 // Tech stack grouped by category. Icons come from Simple Icons via CDN
 // (https://cdn.simpleicons.org/<slug>). If a slug has no icon, the component
 // falls back to a letter tile, so an empty/unknown `slug` is safe.
-// Keep this honest — only things actually used in a project or writing.
 export const techstack = [
   {
     category: 'Languages',
