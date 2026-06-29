@@ -1,6 +1,7 @@
 import Section from './Section'
 import SectionHeader from './SectionHeader'
 import { profile, stats } from '../lib/profile'
+import { LinkedInIcon, ArrowUpRightIcon } from './icons'
 
 export default function About() {
   return (
@@ -29,10 +30,31 @@ export default function About() {
           >
             Connect on LinkedIn →
           </a>
+
+          {/* Themed LinkedIn card (custom, not the off-theme LinkedIn iframe widget). */}
+          <a
+            href={profile.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group mt-6 block max-w-sm rounded-xl border border-line bg-surface p-5 transition-all duration-300 hover:border-accent hover:shadow-[0_10px_40px_-15px_rgba(29,158,117,0.45)]"
+          >
+            <div className="flex items-center gap-2 text-muted">
+              <LinkedInIcon className="w-5 h-5 text-accent" />
+              <span className="font-mono text-xs">LinkedIn</span>
+            </div>
+            <div className="mt-3 font-display text-lg text-text leading-snug">{profile.name}</div>
+            <p className="text-sm text-muted mt-1">
+              {profile.role} · {profile.location}
+            </p>
+            <span className="mt-4 inline-flex items-center gap-1.5 text-sm text-accent group-hover:text-accent-dim transition-colors">
+              View profile
+              <ArrowUpRightIcon className="w-3.5 h-3.5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            </span>
+          </a>
         </div>
 
-        {/* Photo + stat block 40% */}
-        <div className="md:col-span-2 flex flex-col gap-8">
+        {/* Photo 40% */}
+        <div className="md:col-span-2">
           <img
             src={profile.photo}
             alt={`Portrait of ${profile.name}`}
@@ -41,15 +63,26 @@ export default function About() {
               e.currentTarget.style.display = 'none'
             }}
           />
-          <div className="flex flex-col gap-6">
-            {stats.map((s) => (
-              <div key={s.label}>
-                <div className="font-display text-5xl text-text leading-none">{s.value}</div>
-                <div className="text-sm text-muted mt-2">{s.label}</div>
-              </div>
-            ))}
-          </div>
         </div>
+      </div>
+
+      {/* Stats — horizontal card spanning the full width */}
+      <div className="mt-12 md:mt-16 grid grid-cols-3 overflow-hidden rounded-xl border border-line bg-surface divide-x divide-line">
+        {stats.map((s) => (
+          <div
+            key={s.label}
+            className="group relative px-6 py-8 text-center transition-colors duration-300 hover:bg-accent/5"
+          >
+            {/* Accent bar that grows in on hover */}
+            <span className="pointer-events-none absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-accent transition-transform duration-300 group-hover:scale-x-100" />
+            <div className="font-display text-4xl md:text-5xl text-accent leading-none">
+              {s.value}
+            </div>
+            <div className="text-sm text-muted mt-3 transition-colors duration-300 group-hover:text-text">
+              {s.label}
+            </div>
+          </div>
+        ))}
       </div>
     </Section>
   )

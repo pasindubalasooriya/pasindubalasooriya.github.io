@@ -15,7 +15,7 @@ export const profile = {
   // Social / contact links
   email: 'pasindudilshanbalasooriya@gmail.com',
   github: 'https://github.com/pasindubalasooriya',
-  linkedin: 'https://www.linkedin.com/in/pasindu-dilshan-balasooriya-a18378305/',
+  linkedin: 'https://www.linkedin.com/in/pasindu-dilshan-balasooriya/',
   medium: 'https://medium.com/@pasindudilshanbalasooriya',
 }
 
