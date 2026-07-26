@@ -10,6 +10,7 @@ export const techstack = [
       { name: 'JavaScript', slug: 'javascript' },
       { name: 'Python', slug: 'python' },
       { name: 'TypeScript', slug: 'typescript' },
+      { name: 'PHP', slug: 'php' },
     ],
   },
   {
@@ -19,6 +20,8 @@ export const techstack = [
       { name: '.NET', slug: 'dotnet' },
       { name: 'React', slug: 'react' },
       { name: 'Node.js', slug: 'nodedotjs' },
+      { name: 'Laravel', slug: 'laravel' },
+      { name: 'Flutter', slug: 'flutter' },
     ],
   },
   {
@@ -47,6 +50,7 @@ export const techstack = [
       { name: 'GitHub', slug: 'github' },
       { name: 'Figma', slug: 'figma' },
       { name: 'Postman', slug: 'postman' },
+      { name: 'Agile', slug: '' },
     ],
   },
 ]

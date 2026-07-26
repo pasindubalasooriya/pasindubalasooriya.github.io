@@ -2,6 +2,24 @@
 // (the tab list is derived from the unique categories below, plus "All").
 export const writing = [
   {
+    title: "Deflation as Devotion: Shakespeare's Subversion of Poetic Convention in Sonnet 130",
+    url: 'https://medium.com/@pasindudilshanbalasooriya/deflation-as-devotion-shakespeares-subversion-of-poetic-convention-in-sonnet-130-2405b2fc9aee',
+    image: 'thumbnails/sonnet-130.jpg',
+    date: 'Jul 2026',
+    readTime: '6 min read',
+    category: 'English Literature',
+    tags: ['literature', 'shakespeare', 'poetry', 'analysis'],
+  },
+  {
+    title: 'What Building an Audit Trail Taught Me About WSO2 Identity Server',
+    url: 'https://medium.com/@pasindudilshanbalasooriya/what-building-an-audit-trail-taught-me-about-wso2-identity-server-b65b16661efd',
+    image: 'thumbnails/audittrail-wso2.png',
+    date: 'Jul 2026',
+    readTime: '7 min read',
+    category: 'WSO2',
+    tags: ['wso2', 'wso2is', 'audit-log', 'identity'],
+  },
+  {
     title: 'How I Ran WSO2 Identity Server on AWS Without Spending a Cent',
     url: 'https://medium.com/@pasindudilshanbalasooriya/how-i-ran-a-real-identity-server-on-aws-without-spending-a-cent-f7c304478129',
     image: 'thumbnails/wso2-aws.png',
@@ -25,7 +43,7 @@ export const writing = [
     image: 'thumbnails/stopping-by-woods.jpg',
     date: 'Jun 2026',
     readTime: '5 min read',
-    category: 'Writing',
+    category: 'English Literature',
     tags: ['literature', 'robert-frost', 'poem'],
   },
   {
@@ -61,7 +79,7 @@ export const writing = [
     image: 'thumbnails/aunt-jennifers-tigers.jpg',
     date: 'Oct 2025',
     readTime: '4 min read',
-    category: 'Writing',
+    category: 'English Literature',
     tags: ['literature', 'analysis', 'poem'],
   },
   {

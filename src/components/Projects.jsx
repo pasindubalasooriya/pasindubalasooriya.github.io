@@ -2,7 +2,7 @@ import Section from './Section'
 import SectionHeader from './SectionHeader'
 import { Stagger, StaggerItem } from './Stagger'
 import { projects } from '../data/projects'
-import { GitHubIcon, ExternalIcon, ArrowUpRightIcon } from './icons'
+import { GitHubIcon, ExternalIcon, MediumIcon, ArrowUpRightIcon } from './icons'
 
 export default function Projects() {
   return (
@@ -66,6 +66,16 @@ export default function Projects() {
                   className="inline-flex items-center gap-1.5 rounded-md border border-accent bg-accent/10 px-3 py-1.5 text-accent hover:bg-accent hover:text-bg transition-colors"
                 >
                   <ExternalIcon /> Live Demo
+                </a>
+              )}
+              {p.blog && (
+                <a
+                  href={p.blog}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-md border border-line px-3 py-1.5 text-text hover:border-accent hover:text-accent transition-colors"
+                >
+                  <MediumIcon className="w-4 h-4" /> Blog
                 </a>
               )}
             </div>

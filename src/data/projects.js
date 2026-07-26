@@ -2,11 +2,13 @@
 export const projects = [
   {
     title: 'AuditTrail',
-    status: 'In Progress',
-    description: 'Payment gateway compliance audit system.',
+    status: 'Completed',
+    description:
+      'Payment gateway compliance audit system that records a tamper-evident trail of identity and access events, secured with WSO2 Identity Server.',
     tech: ['Spring Boot', 'WSO2 IS', 'JWT', 'OAuth2'],
-    github: '', // TODO: repo URL
+    github: 'https://github.com/pasindubalasooriya/AuditTrail',
     demo: '',
+    blog: 'https://medium.com/@pasindudilshanbalasooriya/what-building-an-audit-trail-taught-me-about-wso2-identity-server-b65b16661efd',
   },
   {
     title: 'MediSync',
@@ -24,6 +26,7 @@ export const projects = [
     tech: ['Terraform', 'AWS', 'WSO2 IS', 'OIDC'],
     github: 'https://github.com/pasindubalasooriya/wso2-is-aws',
     demo: '',
+    blog: 'https://medium.com/@pasindudilshanbalasooriya/how-i-ran-a-real-identity-server-on-aws-without-spending-a-cent-f7c304478129',
   },
   {
     title: 'Library Management System',
