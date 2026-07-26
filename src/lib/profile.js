@@ -21,7 +21,7 @@ export const profile = {
 
 // Stat block for the About section.
 export const stats = [
-  { value: '2', label: 'Open-source PRs merged' },
+  { value: '6', label: 'Open-source PRs merged' },
   { value: '7', label: 'Projects built' },
   { value: '12', label: 'Articles on Medium' },
 ]
