@@ -7,8 +7,8 @@
       (function () {
         try {
           var saved = localStorage.getItem('theme')
-          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-          var dark = saved ? saved === 'dark' : prefersDark
+          // Default to dark when the visitor has no saved preference.
+          var dark = saved ? saved === 'dark' : true
           document.documentElement.classList.toggle('dark', dark)
           document.documentElement.style.colorScheme = dark ? 'dark' : 'light'
         } catch (e) {}
@@ -104,7 +104,7 @@
       async
       src="/count.js"
     ></script>
-    <script type="module" crossorigin src="/assets/index-Dux6aDiK.js"></script>
+    <script type="module" crossorigin src="/assets/index-ChDAnvkd.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-DuTvPDUa.css">
   </head>
   <body>
