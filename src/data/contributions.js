@@ -60,22 +60,15 @@ export const contributions = [
   {
     repo: 'thunder-id/thunderid',
     description: 'Validated duplicate application names early in the console creation wizard.',
-    status: 'Open',
+    status: 'Merged',
     url: 'https://github.com/thunder-id/thunderid/pull/3924',
     pr: '#3924',
   },
   {
     repo: 'thunder-id/thunderid',
     description: 'Fixed broken anchor links in the documentation.',
-    status: 'Open',
+    status: 'Merged',
     url: 'https://github.com/thunder-id/thunderid/pull/3922',
     pr: '#3922',
-  },
-  {
-    repo: 'thunder-id/thunderid',
-    description: 'Corrected Docker volume mount paths in the deployment docs.',
-    status: 'Open',
-    url: 'https://github.com/thunder-id/thunderid/pull/3921',
-    pr: '#3921',
   },
 ]
