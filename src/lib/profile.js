@@ -23,5 +23,5 @@ export const profile = {
 export const stats = [
   { value: '8', label: 'Open-source PRs merged' },
   { value: '7', label: 'Projects built' },
-  { value: '15', label: 'Articles on Medium' },
+  { value: '16', label: 'Articles on Medium' },
 ]

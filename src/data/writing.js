@@ -2,6 +2,15 @@
 // (the tab list is derived from the unique categories below, plus "All").
 export const writing = [
   {
+    title: 'Markdown Is the Quietly Powerful Language You Already Almost Know',
+    url: 'https://medium.com/@pasindudilshanbalasooriya/markdown-is-the-quietly-powerful-language-you-already-almost-know-177c20680e27',
+    image: 'thumbnails/markdown.jpg',
+    date: 'Aug 2026',
+    readTime: '6 min read',
+    category: 'Engineering',
+    tags: ['markdown', 'writing', 'documentation', 'tools'],
+  },
+  {
     title: "Deflation as Devotion: Shakespeare's Subversion of Poetic Convention in Sonnet 130",
     url: 'https://medium.com/@pasindudilshanbalasooriya/deflation-as-devotion-shakespeares-subversion-of-poetic-convention-in-sonnet-130-2405b2fc9aee',
     image: 'thumbnails/sonnet-130.jpg',
