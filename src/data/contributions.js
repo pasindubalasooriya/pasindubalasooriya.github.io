@@ -71,4 +71,25 @@ export const contributions = [
     url: 'https://github.com/thunder-id/thunderid/pull/3922',
     pr: '#3922',
   },
+  {
+    repo: 'thunder-id/thunderid',
+    description: 'Added a --version flag to the thunderid CLI.',
+    status: 'Open',
+    url: 'https://github.com/thunder-id/thunderid/pull/5144',
+    pr: '#5144',
+  },
+  {
+    repo: 'thunder-id/thunderid',
+    description: 'Removed unreachable POST auth callback handlers from the authz package.',
+    status: 'Open',
+    url: 'https://github.com/thunder-id/thunderid/pull/5141',
+    pr: '#5141',
+  },
+  {
+    repo: 'thunder-id/thunderid',
+    description: 'Carried OAuth token binding flags through declarative import.',
+    status: 'Open',
+    url: 'https://github.com/thunder-id/thunderid/pull/5140',
+    pr: '#5140',
+  },
 ]
