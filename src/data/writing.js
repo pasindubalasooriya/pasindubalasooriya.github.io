@@ -2,6 +2,15 @@
 // (the tab list is derived from the unique categories below, plus "All").
 export const writing = [
   {
+    title: "Inside WSO2 ThunderID's Post-Quantum JWKS",
+    url: 'https://medium.com/@pasindudilshanbalasooriya/inside-wso2-thunderids-post-quantum-jwks-4a835b7250e8',
+    image: 'thumbnails/thunderid-post-quantum-jwks.png',
+    date: 'Aug 2026',
+    readTime: '7 min read',
+    category: 'WSO2',
+    tags: ['wso2', 'thunder', 'post-quantum', 'jwks'],
+  },
+  {
     title: 'Markdown Is the Quietly Powerful Language You Already Almost Know',
     url: 'https://medium.com/@pasindudilshanbalasooriya/markdown-is-the-quietly-powerful-language-you-already-almost-know-177c20680e27',
     image: 'thumbnails/markdown.jpg',
