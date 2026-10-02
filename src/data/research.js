@@ -8,6 +8,7 @@ export const research = [
     venue: 'APIIT International Research Conference (AIRC)',
     track: 'Cybersecurity & Emerging Technologies, Computing',
     date: 'Oct 2026',
+    isbn: '978-624-6201-21-0',
     awards: ['Best Paper', 'Best Presenter'],
     summary:
       'Storing NHS patient data in the AWS London Region fixes where it sits, not who can act on it: the management plane stays global. Through a systematic review of 36 studies, the paper shows no prior work maps DSP Toolkit v8 to AWS controls, then proposes a compensating-controls framework binding DSP Toolkit and UK GDPR Article 28 obligations to customer-managed KMS keys, Service Control Policies, immutable CloudTrail and a self-hosted WSO2 API Manager gateway, verified in a sandbox AWS organisation.',

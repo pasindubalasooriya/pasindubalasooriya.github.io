@@ -47,6 +47,9 @@ export default function Research() {
             <p className="font-mono text-xs text-accent mt-1 leading-relaxed">
               {r.venue} · {r.track} · {r.date}
             </p>
+            {r.isbn && (
+              <p className="font-mono text-xs text-muted mt-1">ISBN {r.isbn}</p>
+            )}
 
             <p className="text-muted mt-5 leading-relaxed">{r.summary}</p>
 
