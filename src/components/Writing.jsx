@@ -26,7 +26,7 @@ export default function Writing() {
 
   return (
     <Section id="writing" className="max-w-content mx-auto px-6 py-24 md:py-32">
-      <SectionHeader index="05" title="Writing" />
+      <SectionHeader index="06" title="Writing" />
 
       <div className="flex flex-wrap gap-2 mb-10">
         {tabs.map((t) => (

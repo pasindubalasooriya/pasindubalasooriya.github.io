@@ -36,7 +36,7 @@ function TechIcon({ name, slug }) {
 export default function TechStack() {
   return (
     <Section id="techstack" className="max-w-content mx-auto px-6 py-24 md:py-32">
-      <SectionHeader index="04" title="Tech Stack" />
+      <SectionHeader index="05" title="Tech Stack" />
 
       <div className="flex flex-col gap-10">
         {techstack.map((group) => (

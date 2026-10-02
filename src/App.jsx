@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Projects from './components/Projects'
 import OpenSource from './components/OpenSource'
+import Research from './components/Research'
 import TechStack from './components/TechStack'
 import Writing from './components/Writing'
 import Contact from './components/Contact'
@@ -21,6 +22,7 @@ export default function App() {
         <About />
         <Projects />
         <OpenSource />
+        <Research />
         <TechStack />
         <Writing />
         <Contact />
