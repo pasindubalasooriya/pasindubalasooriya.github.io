@@ -2,7 +2,7 @@ import Section from './Section'
 import SectionHeader from './SectionHeader'
 import { Stagger, StaggerItem } from './Stagger'
 import { research } from '../data/research'
-import { ExternalIcon, MediumIcon } from './icons'
+import { ExternalIcon, MediumIcon, TrophyIcon } from './icons'
 
 export default function Research() {
   return (
@@ -17,15 +17,24 @@ export default function Research() {
             key={r.title}
             className="rounded-xl border border-line bg-surface p-6 md:p-8 transition-all duration-300 hover:border-accent hover:shadow-[0_10px_40px_-15px_rgba(29,158,117,0.45)]"
           >
-            <div className="flex flex-wrap items-center gap-2">
-              {r.awards.map((a) => (
-                <span
-                  key={a}
-                  className="inline-flex items-center gap-1.5 font-mono text-xs text-accent border border-accent bg-accent/10 rounded-full px-3 py-1"
-                >
-                  <span aria-hidden="true">★</span> {a}
-                </span>
-              ))}
+            <div className="rounded-lg border border-accent/60 bg-accent/10 p-4 md:p-5">
+              <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-accent">
+                <TrophyIcon className="w-4 h-4" /> Awards won
+              </div>
+              <ul className="flex flex-wrap gap-3 mt-3">
+                {r.awards.map((a) => (
+                  <li
+                    key={a}
+                    className="inline-flex items-center gap-2 rounded-md bg-accent text-bg px-4 py-2 shadow-[0_8px_24px_-12px_rgba(29,158,117,0.8)]"
+                  >
+                    <TrophyIcon className="w-5 h-5" />
+                    <span className="font-display text-lg leading-none">{a} Award</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="font-mono text-xs text-muted mt-3">
+                {r.track} track · {r.venue} {r.date.split(' ')[1]}
+              </p>
             </div>
 
             <h3 className="font-display text-2xl md:text-3xl text-text mt-5 leading-snug">

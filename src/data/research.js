@@ -4,8 +4,8 @@ export const research = [
   {
     title:
       'Beyond Data Residency: Compensating Controls for Sovereign Management of NHS Patient Data on AWS under the DSP Toolkit',
-    authors: ['B.M.P.D. Balasooriya', 'D.P.P. Mahindapala'],
-    venue: 'APIIT International Research Conference',
+    authors: ['B.M.P.D. Balasooriya', 'D.P.P. Mahindapala (WSO2)'],
+    venue: 'APIIT International Research Conference (AIRC)',
     track: 'Cybersecurity & Emerging Technologies, Computing',
     date: 'Oct 2026',
     awards: ['Best Paper', 'Best Presenter'],

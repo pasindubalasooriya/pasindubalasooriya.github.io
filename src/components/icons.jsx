@@ -84,3 +84,16 @@ export function MoonIcon({ className = 'w-5 h-5' }) {
     </svg>
   )
 }
+
+export function TrophyIcon({ className = 'w-5 h-5' }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M8 4h8v5a4 4 0 0 1-8 0V4Z" />
+      <path d="M8 6H5v1a3 3 0 0 0 3 3" />
+      <path d="M16 6h3v1a3 3 0 0 1-3 3" />
+      <path d="M12 13v4" />
+      <path d="M8 20h8" />
+      <path d="M10 17h4v3h-4z" />
+    </svg>
+  )
+}
