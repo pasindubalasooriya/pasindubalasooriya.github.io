@@ -10,6 +10,7 @@ const links = [
   { id: 'research', label: 'Research' },
   { id: 'techstack', label: 'Tech Stack' },
   { id: 'writing', label: 'Writing' },
+  { id: 'recommendations', label: 'Recommendations' },
   { id: 'contact', label: 'Contact' },
 ]
 

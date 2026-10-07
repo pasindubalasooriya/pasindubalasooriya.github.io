@@ -6,6 +6,7 @@ import OpenSource from './components/OpenSource'
 import Research from './components/Research'
 import TechStack from './components/TechStack'
 import Writing from './components/Writing'
+import Recommendations from './components/Recommendations'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ScrollProgress from './components/ScrollProgress'
@@ -25,6 +26,7 @@ export default function App() {
         <Research />
         <TechStack />
         <Writing />
+        <Recommendations />
         <Contact />
       </main>
       <Footer />
