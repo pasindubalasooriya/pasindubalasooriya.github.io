@@ -17,11 +17,16 @@ export const profile = {
   github: 'https://github.com/pasindubalasooriya',
   linkedin: 'https://www.linkedin.com/in/pasindu-dilshan-balasooriya/',
   medium: 'https://medium.com/@pasindudilshanbalasooriya',
+
+  // Research profiles
+  researchgate: 'https://www.researchgate.net/profile/Pasindu-Balasooriya-4',
+  scholar: 'https://scholar.google.com/citations?user=Y7KCGnwAAAAJ&hl=en',
+  orcid: 'https://orcid.org/0009-0003-7994-1195',
 }
 
 // Stat block for the About section.
 export const stats = [
   { value: '11', label: 'Open-source PRs merged' },
   { value: '7', label: 'Projects built' },
-  { value: '17', label: 'Articles on Medium' },
+  { value: '23', label: 'Articles on Medium' },
 ]
