@@ -2,13 +2,35 @@ import Section from './Section'
 import SectionHeader from './SectionHeader'
 import { Stagger, StaggerItem } from './Stagger'
 import { research } from '../data/research'
-import { ExternalIcon, MediumIcon, TrophyIcon } from './icons'
+import { profile } from '../lib/profile'
+import { ExternalIcon, MediumIcon, TrophyIcon, ResearchGateIcon, ScholarIcon, OrcidIcon } from './icons'
+
+const researchProfiles = [
+  { label: 'ResearchGate', href: profile.researchgate, Icon: ResearchGateIcon },
+  { label: 'Google Scholar', href: profile.scholar, Icon: ScholarIcon },
+  { label: 'ORCID', href: profile.orcid, Icon: OrcidIcon },
+]
 
 export default function Research() {
   return (
     <Section id="research" className="max-w-content mx-auto px-6 py-24 md:py-32">
       <SectionHeader index="04" title="Research" className="mb-3" />
-      <p className="text-muted mb-10">Peer-reviewed work on cloud security and compliance.</p>
+      <p className="text-muted">Peer-reviewed work on cloud security and compliance.</p>
+
+      <ul className="flex flex-wrap gap-3 mt-5 mb-10 text-sm">
+        {researchProfiles.map(({ label, href, Icon }) => (
+          <li key={label}>
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-md border border-line px-3 py-1.5 text-text hover:border-accent hover:text-accent transition-colors"
+            >
+              <Icon className="w-4 h-4" /> {label}
+            </a>
+          </li>
+        ))}
+      </ul>
 
       <Stagger className="flex flex-col gap-6">
         {research.map((r) => (

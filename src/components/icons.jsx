@@ -97,3 +97,31 @@ export function TrophyIcon({ className = 'w-5 h-5' }) {
     </svg>
   )
 }
+
+export function ResearchGateIcon({ className = 'w-5 h-5' }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
+      <rect x="2.5" y="2.5" width="19" height="19" rx="3" />
+      <text x="12" y="16" textAnchor="middle" fontSize="10" fontWeight="700" fontFamily="Arial, sans-serif" fill="currentColor" stroke="none">RG</text>
+    </svg>
+  )
+}
+
+export function ScholarIcon({ className = 'w-5 h-5' }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="m2 9 10-5 10 5-10 5-10-5Z" />
+      <path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5" />
+      <path d="M22 9v5" />
+    </svg>
+  )
+}
+
+export function OrcidIcon({ className = 'w-5 h-5' }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
+      <circle cx="12" cy="12" r="10" />
+      <text x="12" y="15.5" textAnchor="middle" fontSize="9" fontWeight="700" fontFamily="Arial, sans-serif" fill="currentColor" stroke="none">iD</text>
+    </svg>
+  )
+}
