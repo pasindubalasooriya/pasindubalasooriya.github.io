@@ -11,6 +11,15 @@ export const writing = [
     tags: ['ai-agents', 'authorization', 'least-privilege', 'wso2'],
   },
   {
+    title: 'Ozymandias: The Colossus That Time Devoured',
+    url: 'https://medium.com/@pasindudilshanbalasooriya/ozymandias-the-colossus-that-time-devoured-5543e8844f4c',
+    image: 'thumbnails/ozymandias.jpg',
+    date: 'Sep 2026',
+    readTime: '5 min read',
+    category: 'English Literature',
+    tags: ['literature', 'shelley', 'poetry', 'analysis'],
+  },
+  {
     title: 'Securing an MCP Server with ThunderID',
     url: 'https://medium.com/@pasindudilshanbalasooriya/securing-an-mcp-server-with-thunderid-86b0eb426ed7',
     image: 'thumbnails/thunderid-post-quantum-jwks.png',
