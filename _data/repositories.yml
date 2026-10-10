@@ -1,0 +1,12 @@
+github_users:
+  - pasindubalasooriya
+
+repo_description_lines_max: 2
+
+github_repos:
+  - pasindubalasooriya/agentid-scope-broker
+  - pasindubalasooriya/thunderid-expense-desk-mcp
+  - pasindubalasooriya/thunderid-agent-sandbox
+  - pasindubalasooriya/AuditTrail
+  - pasindubalasooriya/360-Degree-Performance-and-Development-Review-Platform
+  - pasindubalasooriya/wso2-is-aws

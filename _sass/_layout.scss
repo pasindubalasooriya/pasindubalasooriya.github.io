@@ -1,0 +1,102 @@
+/******************************************************************************
+ * Content
+ ******************************************************************************/
+
+@use "variables" as v;
+
+body {
+  padding-bottom: 70px;
+  color: var(--global-text-color);
+  background-color: var(--global-bg-color);
+  font-family: var(--global-font-family);
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    scroll-margin-top: 66px;
+  }
+}
+
+body.fixed-top-nav {
+  // Add some padding for the nav-bar.
+  padding-top: 57px;
+}
+
+body.sticky-bottom-footer {
+  // Remove padding below footer.
+  padding-bottom: 0;
+}
+
+.container {
+  max-width: v.$max-content-width;
+}
+
+// Profile
+.profile {
+  img {
+    width: 100%;
+  }
+}
+
+// Content layout uses Bootstrap's grid system with responsive columns
+// Main content flows naturally through container-mt-5 and Bootstrap grid classes
+// See _layouts/default.liquid and _includes/projects.liquid for examples
+
+// About page section spacing
+.post article {
+  > h2 {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--global-divider-color);
+
+    a {
+      background-image: none;
+
+      &:hover {
+        background-image: none;
+      }
+    }
+  }
+
+  > h2:first-of-type {
+    margin-top: 2rem;
+    border-top: none;
+    padding-top: 0;
+  }
+}
+
+// Post header
+.post-header {
+  margin-bottom: 1.5rem;
+
+  .post-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .desc {
+    color: var(--global-text-color-light);
+    font-size: 1.1rem;
+    margin-top: 0.25rem;
+  }
+}
+
+/******************************************************************************
+ * Publications
+ ******************************************************************************/
+
+// Publications layout is defined in _includes/bib_search.liquid
+// Uses jekyll-scholar for BibTeX parsing and Bootstrap cards for display
+
+/*****************************************************************************
+* Projects
+*****************************************************************************/
+
+// TODO: redefine projects layout.

@@ -1,0 +1,66 @@
+# Open-source pull requests. status: Merged | Open
+- repo: wso2/docs-is
+  pr: "#6191"
+  description: Fixed a WS-Trust STS client note that rendered as a code block instead of a styled admonition callout.
+  status: Merged
+  url: https://github.com/wso2/docs-is/pull/6191
+- repo: wso2/identity-apps
+  pr: "#10417"
+  description: Repaired broken documentation anchor links in the Console, updating outdated paths to their current equivalents.
+  status: Merged
+  url: https://github.com/wso2/identity-apps/pull/10417
+- repo: wso2/docs-is
+  pr: "#6251"
+  description: Fixed the article used before "WSO2 Identity Platform" following the product rename.
+  status: Merged
+  url: https://github.com/wso2/docs-is/pull/6251
+- repo: wso2/docs-is
+  pr: "#6250"
+  description: Fixed a broken signup link in the SMART on FHIR tutorial prerequisites.
+  status: Merged
+  url: https://github.com/wso2/docs-is/pull/6250
+- repo: wso2/docs-is
+  pr: "#6253"
+  description: Removed duplicated words across the Identity Server documentation.
+  status: Merged
+  url: https://github.com/wso2/docs-is/pull/6253
+- repo: wso2/docs-is
+  pr: "#6252"
+  description: Corrected spelling mistakes throughout the documentation.
+  status: Merged
+  url: https://github.com/wso2/docs-is/pull/6252
+- repo: wso2-open-operations/people-ops-suite
+  pr: "#299"
+  description: Refreshed Asgardeo JWKS on key rotation and removed an unsafe key fallback in careers-app JWT validation.
+  status: Open
+  url: https://github.com/wso2-open-operations/people-ops-suite/pull/299
+- repo: wso2-open-operations/people-ops-suite
+  pr: "#300"
+  description: Mapped upstream-token failures to 502/504 and corrected the backend port in the careers-app config template.
+  status: Open
+  url: https://github.com/wso2-open-operations/people-ops-suite/pull/300
+- repo: thunder-id/thunderid
+  pr: "#3924"
+  description: Validated duplicate application names early in the console creation wizard.
+  status: Merged
+  url: https://github.com/thunder-id/thunderid/pull/3924
+- repo: thunder-id/thunderid
+  pr: "#3922"
+  description: Fixed broken anchor links in the documentation.
+  status: Merged
+  url: https://github.com/thunder-id/thunderid/pull/3922
+- repo: thunder-id/thunderid
+  pr: "#5144"
+  description: Added a --version flag to the thunderid CLI.
+  status: Merged
+  url: https://github.com/thunder-id/thunderid/pull/5144
+- repo: thunder-id/thunderid
+  pr: "#5141"
+  description: Removed unreachable POST auth callback handlers from the authz package.
+  status: Merged
+  url: https://github.com/thunder-id/thunderid/pull/5141
+- repo: thunder-id/thunderid
+  pr: "#5140"
+  description: Carried OAuth token binding flags through declarative import.
+  status: Merged
+  url: https://github.com/thunder-id/thunderid/pull/5140

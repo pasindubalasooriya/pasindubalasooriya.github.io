@@ -1,0 +1,94 @@
+---
+layout: default
+---
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      {% if site.title == 'blank' %}
+        {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}
+      {% else %}
+        {{ site.title }}
+      {% endif %}
+    </h1>
+    <p class="desc">{{ page.subtitle }}</p>
+    {% if page.open_to_work %}
+      <p class="open-to-work"><span class="pulse" aria-hidden="true"></span>{{ page.open_to_work }}</p>
+    {% endif %}
+  </header>
+
+  <article>
+    {% if page.profile %}
+      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
+        {% if page.profile.image %}
+          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+          {% if page.profile.image_circular %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+          {% else %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
+          {% endif %}
+          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
+      30vw, 95vw"{% endcapture %}
+          {%
+            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.alt
+            cache_bust=true
+          %}
+        {% endif %}
+        {% if page.profile.more_info %}
+          <div class="more-info">{{ page.profile.more_info }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="clearfix">{{ content }}</div>
+
+    <!-- Stats: counts come from the site data so they never go stale -->
+    {% if page.stats %}
+      {% assign merged_prs = site.data.contributions | where: 'status', 'Merged' %}
+      <div class="stats">
+        <a class="stat" href="{{ '/open-source/' | relative_url }}">
+          <span class="stat-value">{{ merged_prs.size }}</span>
+          <span class="stat-label">Open-source PRs merged</span>
+        </a>
+        <a class="stat" href="{{ '/projects/' | relative_url }}">
+          <span class="stat-value">{{ site.projects.size }}</span>
+          <span class="stat-label">Projects built</span>
+        </a>
+        <a class="stat" href="{{ '/blog/' | relative_url }}">
+          <span class="stat-value">{{ site.posts.size }}</span>
+          <span class="stat-label">Articles on Medium</span>
+        </a>
+      </div>
+    {% endif %}
+
+    <!-- GitHub activity -->
+    {% if page.activity %}
+      {% assign gh_user = site.data.repositories.github_users | first %}
+      {% if gh_user %}
+        <h2>activity</h2>
+        <div class="activity">
+          <img
+            src="https://ghchart.rshah.org/{{ site.activity_color | default: '0F7A5A' }}/{{ gh_user }}"
+            alt="GitHub contribution graph for {{ gh_user }}"
+            loading="lazy"
+          >
+        </div>
+      {% endif %}
+    {% endif %}
+
+    <!-- Latest posts -->
+    {% if page.latest_posts and page.latest_posts.enabled %}
+      <h2>
+        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest writing</a>
+      </h2>
+      {% include latest_posts.liquid %}
+    {% endif %}
+
+    <!-- Social -->
+    {% if page.social %}
+      <div class="social">
+        <div class="contact-icons">{% social_links %}</div>
+        <div class="contact-note">{{ site.contact_note }}</div>
+      </div>
+    {% endif %}
+  </article>
+</div>

@@ -1,0 +1,64 @@
+# Tech stack by category. slug is a Simple Icons slug (https://cdn.simpleicons.org/<slug>);
+# leave it empty to show a letter tile instead.
+- category: Languages
+  items:
+    - name: Java
+      slug: openjdk
+    - name: C#
+      slug: csharp
+    - name: JavaScript
+      slug: javascript
+    - name: Python
+      slug: python
+    - name: TypeScript
+      slug: typescript
+    - name: PHP
+      slug: php
+- category: Frameworks
+  items:
+    - name: Spring Boot
+      slug: springboot
+    - name: .NET
+      slug: dotnet
+    - name: React
+      slug: react
+    - name: Node.js
+      slug: nodedotjs
+    - name: Laravel
+      slug: laravel
+    - name: Flutter
+      slug: flutter
+- category: Identity & Security
+  items:
+    - name: WSO2 IS
+      slug: wso2
+    - name: Asgardeo
+      slug: ""
+    - name: OAuth2
+      slug: ""
+    - name: OIDC
+      slug: openid
+    - name: JWT
+      slug: jsonwebtokens
+- category: Cloud & Infra
+  items:
+    - name: AWS
+      slug: amazonwebservices
+    - name: Docker
+      slug: docker
+    - name: Terraform
+      slug: terraform
+    - name: Firebase
+      slug: firebase
+- category: Tools
+  items:
+    - name: Git
+      slug: git
+    - name: GitHub
+      slug: github
+    - name: Figma
+      slug: figma
+    - name: Postman
+      slug: postman
+    - name: Agile
+      slug: ""

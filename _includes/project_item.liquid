@@ -1,0 +1,48 @@
+{% assign external_link = project.redirect | default: project.demo | default: project.github %}
+{% if external_link %}
+  {% assign project_link = external_link %}
+{% else %}
+  {% assign project_link = project.url | relative_url %}
+{% endif %}
+<article class="entry">
+  <div class="entry-head">
+    <a
+      class="entry-title"
+      href="{{ project_link }}"
+      {% if external_link %}
+        target="_blank" rel="noopener"
+      {% endif %}
+    >
+      {{- project.title -}}
+    </a>
+    {% if project.demo %}
+      <span class="chip chip-accent">live</span>
+    {% endif %}
+  </div>
+  {% if project.description %}
+    <p class="entry-desc">{{ project.description }}</p>
+  {% endif %}
+  {% if project.tags and project.tags.size > 0 %}
+    <div class="entry-meta">
+      <span class="entry-tags">
+        {% for tag in project.tags %}
+          <span class="chip">{{ tag }}</span>
+        {% endfor %}
+      </span>
+    </div>
+  {% endif %}
+  <div class="entry-links">
+    {% if project.github %}
+      <a class="entry-link" href="{{ project.github }}" target="_blank" rel="noopener">source</a>
+    {% endif %}
+    {% if project.demo %}
+      <a class="entry-link" href="{{ project.demo }}" target="_blank" rel="noopener">live demo</a>
+    {% endif %}
+    {% if project.blog %}
+      <a class="entry-link" href="{{ project.blog }}" target="_blank" rel="noopener">read the article</a>
+    {% endif %}
+    {% unless external_link %}
+      <a class="entry-link" href="{{ project_link }}">read more</a>
+    {% endunless %}
+  </div>
+</article>
