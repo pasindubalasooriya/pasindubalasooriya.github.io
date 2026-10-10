@@ -50,7 +50,10 @@
       {% if post.categories.size > 0 %}
         <span class="entry-category">{{ post.categories | first }}</span>
       {% endif %}
-      <span>{% if post_external and post.redirect contains 'medium.com' %}Medium · {% endif %}{{ read_time }} min read</span>
+      <span>
+        {%- if post_external and post.redirect contains 'medium.com' %}Medium · {% endif -%}
+        {{- read_time }} min read</span
+      >
       {% if post.tags and post.tags.size > 0 %}
         <span class="entry-tags">
           {% for tag in post.tags limit: 3 %}
