@@ -18,7 +18,7 @@ nav_order: 5
           {% if item.slug != blank %}
             <img
               class="tech-icon"
-              src="https://cdn.simpleicons.org/{{ item.slug }}"
+              src="https://cdn.simpleicons.org/{{ item.slug }}/1A1814"
               alt=""
               loading="lazy"
               onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'tech-icon tech-tile',textContent:'{{ item.name | slice: 0 }}'}))"

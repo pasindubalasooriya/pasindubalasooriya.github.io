@@ -1,0 +1,46 @@
+{% if page.permalink == '/' %}
+  <!-- Structured data: Person -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}",
+      "jobTitle": "Full-Stack Engineer",
+      "url": "{{ site.url }}/",
+      "image": "{{ '/assets/img/prof_pic.jpg' | prepend: site.url }}",
+      "email": "mailto:{{ site.data.socials.email }}",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Colombo",
+        "addressCountry": "Sri Lanka"
+      },
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Staffordshire"
+      },
+      "knowsAbout": [
+        "Full-Stack Development",
+        "Java",
+        "Spring Boot",
+        "React",
+        "AWS",
+        "DevOps",
+        "CI/CD",
+        "Identity and Access Management",
+        "WSO2 Identity Server",
+        "OAuth2",
+        "OpenID Connect",
+        "Open Source"
+      ],
+      "sameAs": [
+        "https://github.com/{{ site.data.socials.github_username }}",
+        "https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}/",
+        "https://medium.com/@{{ site.data.socials.medium_username }}"
+      ]
+    }
+  </script>
+{% endif %}
+
+<!-- Analytics: GoatCounter. count.js is self-hosted (copied from https://gc.zgo.at/count.js)
+     so blockers can't strip the script. It ignores localhost, so local builds don't log hits. -->
+<script data-goatcounter="https://pasindubalasooriya.goatcounter.com/count" async src="{{ '/assets/js/count.js' | relative_url }}"></script>

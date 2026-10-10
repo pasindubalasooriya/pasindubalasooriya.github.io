@@ -131,3 +131,339 @@ html[data-theme="dark"] .activity img {
     }
   }
 }
+
+/*******************************************************************************
+ * Portfolio look carried over from the previous React site: DM Serif Display
+ * headings, teal accent, film grain, accent glow on hover, themed scrollbar.
+ ******************************************************************************/
+
+$display-font: "DM Serif Display", Georgia, serif;
+$accent-glow: 0 10px 40px -15px rgba(29, 158, 117, 0.45);
+
+h1,
+h2,
+h3,
+.post-title,
+.page-header h1,
+.entry-title,
+.navbar-brand {
+  font-family: $display-font;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.post-title,
+.page-header h1 {
+  font-size: clamp(2.25rem, 6vw, 3rem);
+  line-height: 1.1;
+}
+
+.navbar .navbar-brand.initials {
+  font-size: 1.5rem;
+  color: var(--global-theme-color);
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: var(--global-theme-color);
+  color: var(--global-bg-color);
+}
+
+:focus-visible {
+  outline: 2px solid var(--global-theme-color);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--global-divider-color) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--global-divider-color);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--global-text-color-light);
+  background-clip: content-box;
+}
+
+// Fine film-grain overlay. Decorative, non-interactive.
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+// Underline that grows in from the left on nav links.
+.navbar .navbar-nav .nav-link {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: 0.45rem calc(100% - 0.35rem);
+  transition:
+    background-size 0.25s ease,
+    color 0.2s ease;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus-visible {
+  background-size: calc(100% - 0.9rem) 1px;
+}
+
+// Repo cards and other bordered surfaces: accent border and teal glow on hover.
+.card,
+.repo,
+.stat,
+.entry-thumb img {
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.card:hover,
+.stat:hover {
+  border-color: var(--global-theme-color);
+  box-shadow: $accent-glow;
+}
+
+/* Home page --------------------------------------------------------------- */
+
+.open-to-work {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 9999px;
+  background: var(--global-card-bg-color);
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+
+  .pulse {
+    position: relative;
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    background: var(--global-theme-color);
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: var(--global-theme-color);
+      animation: pulse-ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+  }
+}
+
+@keyframes pulse-ping {
+  75%,
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .open-to-work .pulse::after {
+    animation: none;
+  }
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 2rem 0;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
+  background: var(--global-card-bg-color);
+  overflow: hidden;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 1.25rem 0.5rem;
+  text-align: center;
+  border: 1px solid transparent;
+  background-image: none;
+
+  & + .stat {
+    border-left-color: var(--global-divider-color);
+  }
+
+  &:hover {
+    background-image: none;
+    background-color: color-mix(in srgb, var(--global-theme-color) 5%, transparent);
+  }
+}
+
+.stat-value {
+  font-family: $display-font;
+  font-size: clamp(2rem, 6vw, 2.75rem);
+  line-height: 1;
+  color: var(--global-theme-color);
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+}
+
+/* Writing list: thumbnail beside each entry ------------------------------- */
+
+.entry-with-thumb {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.entry-thumb {
+  flex: 0 0 120px;
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid var(--global-divider-color);
+  background-image: linear-gradient(135deg, #0f6e56, #1d9e75);
+  aspect-ratio: 3 / 2;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+}
+
+.entry-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.entry-category {
+  font-family: var(--global-font-mono);
+  color: var(--global-theme-color);
+}
+
+.entry-meta {
+  flex-wrap: wrap;
+}
+
+.entry-tags {
+  flex-wrap: wrap;
+}
+
+@media (max-width: 576px) {
+  .entry-with-thumb {
+    gap: 0.75rem;
+  }
+
+  .entry-thumb {
+    flex-basis: 84px;
+  }
+
+  .entry-with-thumb .entry-title {
+    font-size: 1.05rem;
+  }
+}
+
+/* Projects and open source ------------------------------------------------ */
+
+.entry-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1rem;
+}
+
+.entry-title-sm {
+  font-family: var(--global-font-family);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Tech stack -------------------------------------------------------------- */
+
+.tech-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tech-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 10px;
+  background: var(--global-card-bg-color);
+  font-size: 0.875rem;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &:hover {
+    border-color: var(--global-theme-color);
+    box-shadow: $accent-glow;
+  }
+}
+
+.tech-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+html[data-theme="dark"] img.tech-icon {
+  filter: invert(1);
+}
+
+.tech-tile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background: var(--global-theme-color);
+  color: var(--global-bg-color);
+  font-family: $display-font;
+  font-size: 0.75rem;
+}
+
+/* Recommendations --------------------------------------------------------- */
+
+.recommendation blockquote {
+  margin: 0.75rem 0 0;
+
+  p {
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+  }
+}
+
+.profile .more-info {
+  overflow-wrap: anywhere;
+}
