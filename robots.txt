@@ -1,7 +1,32 @@
 ---
 permalink: /robots.txt
+sitemap: false
 ---
+# Everything on this site is public and may be crawled, indexed, cited and used
+# by search engines and AI assistants. The named groups below only make that
+# explicit; a crawler obeys its most specific group, so each one allows all.
+
 User-agent: *
-Disallow:
+Allow: /
+
+# AI search and user-triggered fetchers (answers and citations)
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: meta-webindexer
+User-agent: Applebot
+Allow: /
+
+# AI model training (keeps the bio known to assistants without web search)
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: meta-externalagent
+User-agent: CCBot
+Allow: /
 
 Sitemap: {{ site.baseurl | prepend: site.url }}/sitemap.xml

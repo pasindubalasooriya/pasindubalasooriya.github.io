@@ -1,0 +1,58 @@
+---
+permalink: /llms.txt
+layout: none
+sitemap: false
+---
+{%- assign person = site.data.person -%}
+{%- assign socials = site.data.socials -%}
+# {{ person.name }}
+
+> {{ person.summary }}
+
+Also known as {{ person.alternate_name }}. Based in {{ person.locality }}, {{ person.country }}. Contact: {{ socials.email }}. This file summarises {{ site.url }} for language models; every fact here also appears on the linked pages.
+
+## Pages
+
+- [About]({{ '/' | absolute_url }}): bio, focus areas and contact details
+- [Writing]({{ '/blog/' | absolute_url }}): {{ site.posts.size }} articles published on Medium
+- [Research]({{ '/publications/' | absolute_url }}): peer-reviewed publications
+- [Projects]({{ '/projects/' | absolute_url }}): {{ site.projects.size }} projects with source links
+- [Open source]({{ '/open-source/' | absolute_url }}): pull requests to WSO2, ThunderID and other projects
+- [Tech stack]({{ '/tech-stack/' | absolute_url }}): languages, frameworks and platforms
+- [Recommendations]({{ '/recommendations/' | absolute_url }}): LinkedIn recommendations from lecturers
+
+## Research
+
+- Beyond Data Residency: Compensating Controls for Sovereign Management of NHS Patient Data on AWS under the DSP Toolkit. B. M. P. D. Balasooriya and D. P. P. Mahindapala. APIIT International Research Conference (AIRC), October 2026, ISBN 978-624-6201-21-0. Won Best Paper and Best Presenter.
+
+## Projects
+{% assign projects = site.projects | sort: 'importance' %}
+{%- for project in projects %}
+- [{{ project.title }}]({{ project.demo | default: project.github | default: project.url | absolute_url }}): {{ project.description }} ({{ project.tags | join: ', ' }}; {{ project.category }})
+{%- endfor %}
+
+## Open source contributions
+{% assign merged = site.data.contributions | where: 'status', 'Merged' %}
+{{ merged.size }} merged pull requests ({{ site.data.contributions.size }} total):
+{% for pr in site.data.contributions %}
+- [{{ pr.repo }} {{ pr.pr }}]({{ pr.url }}): {{ pr.description }} ({{ pr.status }})
+{%- endfor %}
+
+## Writing
+{% for post in site.posts %}
+- [{{ post.title }}]({{ post.redirect | default: post.url | absolute_url }}): {{ post.categories | first }}, {{ post.date | date: '%B %Y' }}
+{%- endfor %}
+
+## Profiles
+
+- GitHub: https://github.com/{{ socials.github_username }}
+- LinkedIn: https://www.linkedin.com/in/{{ socials.linkedin_username }}/
+- Medium: https://medium.com/@{{ socials.medium_username }}
+- ORCID: https://orcid.org/{{ socials.orcid_id }}
+- Google Scholar: https://scholar.google.com/citations?user={{ socials.scholar_userid }}
+- ResearchGate: https://www.researchgate.net/profile/{{ socials.research_gate_profile }}
+
+## Optional
+
+- [Atom feed]({{ '/feed.xml' | absolute_url }})
+- [Sitemap]({{ '/sitemap.xml' | absolute_url }})

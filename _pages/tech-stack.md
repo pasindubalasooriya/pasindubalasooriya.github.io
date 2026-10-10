@@ -5,6 +5,7 @@ title: tech stack
 heading: Tech Stack
 subtitle: The languages, frameworks and platforms I build with.
 description: Tech stack of Pasindu Dilshan Balasooriya - Java, C#, Spring Boot, .NET, React, WSO2 Identity Server, OAuth2, OIDC, AWS, Docker and Terraform.
+schema_type: WebPage
 nav: true
 nav_order: 5
 ---

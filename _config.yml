@@ -2,14 +2,19 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: blank # the website title (if blank, full name will be used instead)
+title: Pasindu Dilshan Balasooriya # the website title; also used by jekyll-feed
+# Home page <title> and og:title. Inner pages use "<heading> - <title>".
+seo_title: Pasindu Dilshan Balasooriya - Full-Stack Engineer, Identity & Access Management
+author:
+  name: Pasindu Dilshan Balasooriya
+  uri: https://pasindubalasooriya.github.io/
 first_name: Pasindu
 middle_name: Dilshan
 last_name: Balasooriya
 initials: PDB
 contact_note: >
   The best way to reach me is by email at pasindudilshanbalasooriya@gmail.com.
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
+description: >- # folded, no trailing newline (it ends up inside JSON-LD strings)
   Pasindu Dilshan Balasooriya - Full-Stack Engineer in Colombo, Sri Lanka. Building secure systems end to end with Spring Boot, React, and WSO2 Identity Server.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
@@ -224,6 +229,13 @@ defaults:
       path: "google208973c9108f3707.html"
     values:
       sitemap: false
+  # Project pages are thin cards; the list links straight to GitHub or the demo.
+  - scope:
+      path: ""
+      type: projects
+    values:
+      sitemap: false
+      robots: noindex, follow
 
 sass:
   style: compressed
@@ -234,7 +246,7 @@ sass:
 
 jekyll-minifier:
   compress_javascript: false # set to false since we are using terser as the js minifier
-  exclude: ["robots.txt", "assets/js/search/*.js", "google208973c9108f3707.html"]
+  exclude: ["robots.txt", "llms.txt", "assets/js/search/*.js", "google208973c9108f3707.html"]
 
 # -----------------------------------------------------------------------------
 # Terser
@@ -387,13 +399,13 @@ enable_openpanel_analytics: false # enables Openpanel analytics (https://openpan
 enable_google_verification: false # enables google site verification
 enable_bing_verification: false # enables bing site verification
 enable_cookie_consent: false # enables GDPR-compliant cookie consent dialog (https://github.com/orestbida/cookieconsent)
-enable_masonry: true # enables automatic project cards arrangement
+enable_masonry: false # enables automatic project cards arrangement
 enable_math: false # enables math typesetting (uses MathJax)
 enable_tooltips: false # enables automatic tooltip links generated for each section titles on pages and posts
 enable_darkmode: true # enables switching between light/dark modes
 enable_navbar_social: false # enables displaying social links in the navbar on the about page
 enable_project_categories: true # enables categorization of projects into multiple categories
-enable_medium_zoom: true # enables image zoom feature (as on medium.com)
+enable_medium_zoom: false # enables image zoom feature (as on medium.com)
 enable_progressbar: true # enables a horizontal progress bar linked to the vertical scroll position
 enable_video_embedding: false # enables video embedding for bibtex entries. If false, the button opens the video link in a new window.
 
@@ -446,7 +458,7 @@ third_party_libraries:
     version: "5.5.0"
   google_fonts:
     url:
-      fonts: "https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Material+Icons&display=swap"
+      fonts: "https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
   highlightjs:
     integrity:
       css:

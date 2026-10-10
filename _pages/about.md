@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-description: Pasindu Dilshan Balasooriya - Full-Stack Engineer in Colombo, Sri Lanka. Building secure systems end to end with Spring Boot, React, and WSO2 Identity Server.
+description: Pasindu Dilshan Balasooriya is a full-stack engineer in Colombo, Sri Lanka, specialising in identity and access management with WSO2 Identity Server, ThunderID, OAuth2 and AWS.
 subtitle: >
   Full-Stack Engineer and Software Engineering undergraduate at the
   <a href="https://www.staffs.ac.uk/" target="_blank">University of Staffordshire</a>
@@ -30,7 +30,7 @@ social: true
 activity: true
 ---
 
-Full-stack engineer building secure systems end to end - and writing about what matters.
+I'm **Pasindu Dilshan Balasooriya**, a full-stack engineer in Colombo, Sri Lanka who specialises in identity and access management: WSO2 Identity Server, ThunderID, Asgardeo, OAuth2 and OpenID Connect, on AWS and Spring Boot. My paper on sovereign management of NHS patient data on AWS won [Best Paper and Best Presenter at AIRC 2026](/publications/). I build secure systems end to end - and write about what matters.
 
 I'm a second-year Software Engineering undergraduate at the University of Staffordshire, and a full-stack developer who'd rather build real things than wait until graduation to start. I work across the stack with Java, C# and Spring Boot, React on the front end, and AWS with DevOps and CI/CD practices underneath, with a soft spot for the security layer: IAM, OAuth2, and OIDC.
 

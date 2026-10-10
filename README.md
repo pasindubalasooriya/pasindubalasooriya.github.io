@@ -34,6 +34,7 @@ Pushing to `main` runs `.github/workflows/deploy.yml`, which builds the site and
 | Tech stack      | `_data/techstack.yml`                                             |
 | Recommendations | `_data/recommendations.yml`                                       |
 | Social links    | `_data/socials.yml`                                               |
+| Person facts    | `_data/person.yml` (schema.org Person and `/llms.txt`)            |
 | Colours, fonts  | `_sass/_themes.scss`, `_sass/_minimal.scss`                       |
 
 ### Adding a Medium article
@@ -55,3 +56,10 @@ related_posts: false
 ```
 
 Only the month is shown. When several posts share a month, the day sets their order (higher is listed first).
+
+## SEO and AI discovery
+
+- `_includes/metadata.liquid` builds titles, Open Graph tags and one JSON-LD `@graph` per page: `ProfilePage` + `Person` (with a stable `#person` `@id`) on the home page, `WebPage`/`CollectionPage` + `BreadcrumbList` elsewhere. Medium stubs get no markup and a canonical pointing at Medium.
+- Tag/category/year archives and project pages are `noindex` and out of the sitemap (`_plugins/archives-sitemap.rb`, `_config.yml` defaults).
+- `robots.txt` explicitly allows AI search and training crawlers; `llms.txt` is generated from the site data.
+- After deploying, verify the site in Google Search Console and Bing Webmaster Tools and submit `/sitemap.xml`.

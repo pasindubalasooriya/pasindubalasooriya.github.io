@@ -15,3 +15,5 @@ Jekyll (al-folio) portfolio for Pasindu Dilshan Balasooriya, deployed to GitHub 
 - Home page stats are computed from `_data/contributions.yml`, `_projects/` and `_posts/`, so don't hardcode counts.
 - Theme colours live as CSS variables in `_sass/_themes.scss`; the portfolio visual layer is `_sass/_minimal.scss`, which loads last in `assets/css/main.scss`.
 - `assets/js/count.js` is vendored GoatCounter; don't reformat it.
+- Person facts (bio, awards, knowsAbout) live in `_data/person.yml` and feed both the JSON-LD and `/llms.txt`; update them there, and keep them consistent with LinkedIn/GitHub/ORCID.
+- Every JSON-LD value must go through `jsonify` so the output stays valid JSON.

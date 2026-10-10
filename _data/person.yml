@@ -1,0 +1,39 @@
+# Facts about the site owner, used for the schema.org Person (ProfilePage on the
+# home page) and for /llms.txt. Keep these consistent with LinkedIn, GitHub,
+# ORCID, Google Scholar and ResearchGate. Social profile URLs come from socials.yml.
+name: Pasindu Dilshan Balasooriya
+alternate_name: Pasindu Balasooriya
+job_title: Full-Stack Engineer
+summary: >-
+  Pasindu Dilshan Balasooriya is a full-stack engineer and Software Engineering
+  undergraduate at the University of Staffordshire, based in Colombo, Sri Lanka.
+  He specialises in identity and access management (WSO2 Identity Server,
+  ThunderID, Asgardeo, OAuth2 and OpenID Connect), AWS and Spring Boot, and his
+  AIRC 2026 paper on sovereign management of NHS patient data on AWS won Best
+  Paper and Best Presenter.
+locality: Colombo
+country: Sri Lanka
+alumni_of:
+  - name: University of Staffordshire
+    type: CollegeOrUniversity
+    url: https://www.staffs.ac.uk/
+awards:
+  - Best Paper, APIIT International Research Conference (AIRC) 2026
+  - Best Presenter, APIIT International Research Conference (AIRC) 2026
+knows_about:
+  - Full-Stack Development
+  - Identity and Access Management
+  - WSO2 Identity Server
+  - ThunderID
+  - Asgardeo
+  - OAuth 2.0
+  - OpenID Connect
+  - AI agent authorization
+  - Java
+  - Spring Boot
+  - React
+  - AWS
+  - Terraform
+  - DevOps
+  - CI/CD
+  - Open Source

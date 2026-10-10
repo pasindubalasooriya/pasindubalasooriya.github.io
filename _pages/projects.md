@@ -5,6 +5,7 @@ permalink: /projects/
 heading: Projects
 subtitle: Identity, security and cloud systems, plus the apps I built along the way.
 description: Projects by Pasindu Dilshan Balasooriya - identity and authorization systems with WSO2 Identity Server and ThunderID, AWS infrastructure, and full-stack apps.
+schema_type: CollectionPage
 nav: true
 nav_order: 3
 display_categories: [live, completed, in progress]

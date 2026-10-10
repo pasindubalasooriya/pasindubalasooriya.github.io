@@ -5,6 +5,7 @@ title: recommendations
 heading: Recommendations
 subtitle: What lecturers I've worked with have written about me on LinkedIn.
 description: LinkedIn recommendations for Pasindu Dilshan Balasooriya from lecturers at APIIT Sri Lanka.
+schema_type: WebPage
 nav: true
 nav_order: 6
 ---
@@ -13,7 +14,7 @@ nav_order: 6
   {% for rec in site.data.recommendations.items %}
     <article class="entry recommendation">
       <div class="entry-head">
-        <span class="entry-title">{{ rec.name }}</span>
+        <h2 class="entry-title">{{ rec.name }}</h2>
         <span class="entry-date">{{ rec.date }}</span>
       </div>
       <p class="entry-sub">{{ rec.title }}</p>

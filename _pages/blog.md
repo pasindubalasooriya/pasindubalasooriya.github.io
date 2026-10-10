@@ -5,6 +5,7 @@ title: writing
 heading: Writing
 subtitle: Articles on identity, cloud, software engineering, design, and English literature. Every post opens on Medium.
 description: Articles by Pasindu Dilshan Balasooriya on WSO2, ThunderID, identity and access management, cloud, software engineering, UX, and English literature.
+schema_type: CollectionPage
 nav: true
 nav_order: 1
 # Set to true to show the in-page search bar (the script only loads with it).

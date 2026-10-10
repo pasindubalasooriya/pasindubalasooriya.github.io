@@ -5,6 +5,7 @@ title: open source
 heading: Open Source
 subtitle: Pull requests to WSO2, ThunderID and other open-source projects, plus my own repositories.
 description: Open-source contributions by Pasindu Dilshan Balasooriya to WSO2 Identity Server docs, identity-apps, ThunderID and more.
+schema_type: CollectionPage
 nav: true
 nav_order: 4
 ---
