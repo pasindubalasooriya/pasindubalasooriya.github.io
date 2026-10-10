@@ -74,7 +74,7 @@ activity_color: 0F7A5A
 # see https://schema.org/docs/faq.html for more information
 serve_og_meta: true # Include Open Graph meta tags in the HTML head
 serve_schema_org: true # Include Schema.org in the HTML head
-og_image: /assets/img/og-image.png # The site-wide (default for all links) Open Graph preview image
+og_image: https://pasindubalasooriya.github.io/assets/img/og-image.png # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -212,6 +212,16 @@ plugins:
 defaults:
   - scope:
       path: "assets"
+    values:
+      sitemap: false
+  # Writing entries are redirect stubs to Medium, so keep them out of the sitemap.
+  - scope:
+      path: ""
+      type: posts
+    values:
+      sitemap: false
+  - scope:
+      path: "google208973c9108f3707.html"
     values:
       sitemap: false
 
