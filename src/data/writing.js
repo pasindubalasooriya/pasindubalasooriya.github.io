@@ -2,15 +2,6 @@
 // (the tab list is derived from the unique categories below, plus "All").
 export const writing = [
   {
-    title: 'Giving AI Agents Only the Access They Need, One Request at a Time',
-    url: 'https://medium.com/@pasindudilshanbalasooriya/giving-ai-agents-only-the-access-they-need-one-request-at-a-time-212692d28381',
-    image: 'thumbnails/ai-agents-least-access.png',
-    date: 'Oct 2026',
-    readTime: '14 min read',
-    category: 'WSO2',
-    tags: ['ai-agents', 'authorization', 'least-privilege', 'wso2'],
-  },
-  {
     title: 'Ozymandias: The Colossus That Time Devoured',
     url: 'https://medium.com/@pasindudilshanbalasooriya/ozymandias-the-colossus-that-time-devoured-5543e8844f4c',
     image: 'thumbnails/ozymandias.jpg',
